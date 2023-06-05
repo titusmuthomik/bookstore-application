@@ -1,4 +1,5 @@
 import book_package.Book;
+import book_package.ShoppingCart;
 import book_package.User;
 
 import java.util.ArrayList;
@@ -15,6 +16,8 @@ public class Demo {
 
         User userOne = new User("titus", "kalunge@mail.com", "qwerty", "Kikuyu", "0713398918", "admin");
 
+
+
         List<Book> books = new ArrayList<>();
         List<User> users = new  ArrayList<>();
 
@@ -25,8 +28,12 @@ public class Demo {
 
         users.add(userOne);
 
+        ShoppingCart shoppingCart = new ShoppingCart(books, userOne);
+
 
         books.forEach(System.out::println);
         users.forEach(System.out::println);
+        double total = shoppingCart.getTotalPrice();
+        System.out.println(total);
     }
 }
