@@ -35,5 +35,6 @@ public class Demo {
         users.forEach(System.out::println);
         double total = shoppingCart.getTotalPrice();
         System.out.println(total);
+        System.out.println(shoppingCart);
     }
 }
