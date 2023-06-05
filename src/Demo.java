@@ -1,4 +1,5 @@
 import book_package.Book;
+import book_package.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,14 +13,20 @@ public class Demo {
         Book bookThree = new Book(123, "Php", "James Gosling", 140, 102);
         Book bookFour = new Book(123, "Python", "James Gosling", 90, 310);
 
+        User userOne = new User("titus", "kalunge@mail.com", "qwerty", "Kikuyu", "0713398918", "admin");
+
         List<Book> books = new ArrayList<>();
+        List<User> users = new  ArrayList<>();
 
         books.add(bookOne);
         books.add(bookTwo);
         books.add(bookThree);
         books.add(bookFour);
 
+        users.add(userOne);
+
 
         books.forEach(System.out::println);
+        users.forEach(System.out::println);
     }
 }
